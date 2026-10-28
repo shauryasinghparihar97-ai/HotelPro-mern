@@ -1,0 +1,197 @@
+:root {
+  --hotel-navy: #0B1B3D;
+  --hotel-navy-light: #162B55;
+  --hotel-navy-dark: #071229;
+  --hotel-gold: #C5A880;
+  --hotel-gold-dark: #A98A5B;
+  --hotel-gold-light: #F4EFEA;
+  --hotel-accent: #D4AF37;
+  --hotel-bg-warm: #FAF8F5;
+  --hotel-text-main: #2D3748;
+  --hotel-text-muted: #64748B;
+  --hotel-border: #E2E8F0;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--hotel-text-main);
+  background-color: var(--hotel-bg-warm);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--hotel-navy);
+}
+
+/* Luxury Accent Buttons */
+.btn-gold {
+  background-color: var(--hotel-gold);
+  border-color: var(--hotel-gold);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--hotel-gold-dark);
+  border-color: var(--hotel-gold-dark);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(197, 168, 128, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-navy {
+  background-color: var(--hotel-navy);
+  border-color: var(--hotel-navy);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-navy:hover, .btn-navy:focus {
+  background-color: var(--hotel-navy-light);
+  border-color: var(--hotel-navy-light);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  border: 1.5px solid var(--hotel-gold);
+  color: var(--hotel-gold-dark);
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--hotel-gold);
+  color: #FFFFFF;
+}
+
+/* Card Styling */
+.hotel-card {
+  background: #FFFFFF;
+  border: 1px solid var(--hotel-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(11, 27, 61, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(11, 27, 61, 0.08);
+}
+
+/* Gold badges */
+.badge-gold {
+  background-color: var(--hotel-gold-light);
+  color: var(--hotel-gold-dark);
+  font-weight: 600;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+}
+
+.badge-navy {
+  background-color: rgba(11, 27, 61, 0.08);
+  color: var(--hotel-navy);
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, rgba(7, 18, 41, 0.75) 0%, rgba(11, 27, 61, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #FFFFFF;
+  padding: 6rem 1rem 5rem;
+}
+
+.hero-subtitle {
+  color: var(--hotel-gold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Booking search bar container */
+.search-bar-box {
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Dashboard Sidebar */
+.admin-sidebar {
+  background: var(--hotel-navy);
+  color: #FFFFFF;
+  min-height: calc(100vh - 72px);
+}
+
+.admin-nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.admin-nav-link:hover, .admin-nav-link.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--hotel-gold);
+}
+
+/* Table styling */
+.hotel-table thead th {
+  background-color: #F8FAFC;
+  color: var(--hotel-navy);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--hotel-border);
+  padding: 1rem;
+}
+
+.hotel-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Navbar Brand styling */
+.brand-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: 0.5px;
+  color: var(--hotel-navy);
+}
+
+.brand-dot {
+  color: var(--hotel-gold);
+}
